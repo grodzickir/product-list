@@ -6,7 +6,6 @@ export default function useProductsList() {
 
     useEffect(() => {
         PlentiApi.getAllProducts(setProductsList)
-        console.log(productsList)
     }, []);
 
     return productsList;

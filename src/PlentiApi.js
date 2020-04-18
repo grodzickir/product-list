@@ -4,12 +4,7 @@ export class PlentiApi {
 
     static getAllProducts(setAllProducts) {
         fetch(PlentiApi.url)
-            .then(res => {
-                    let json = res.json();
-                    console.log(json);
-                    return json;
-                }
-            )
+            .then(res => res.json())
             .then(json => setAllProducts(json));
     }
 }
