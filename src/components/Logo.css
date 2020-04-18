@@ -1,0 +1,10 @@
+.Plenti-logo {
+    display: flex;
+    flex: 1 0;
+    pointer-events: none;
+}
+.Plenti-logo>img {
+    display: table;
+    height: 100%;
+    width: auto;
+}
