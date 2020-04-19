@@ -8,12 +8,21 @@ export default function ProductList({searchQuery}) {
 
     return (
         <div>
-            {searchQuery} <br/>
             Product List
-            { productsList?.map(product =>
-                <Product key={product.id} product={product} />
-            ) }
+            {productsList
+                ?.filter(product => {
+                    return filter(searchQuery, product)
+                })
+                ?.map(product =>
+                    <Product key={product.id} product={product}/>
+                )}
         </div>
     )
+
+    function filter(searchQuery, product) {
+        return searchQuery == null
+            || product.name.includes(searchQuery)
+            || product.description.includes(searchQuery)
+    }
 
 }
