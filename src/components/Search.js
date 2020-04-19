@@ -6,11 +6,10 @@ export default function Search({setSearchQuery}) {
 
     return (
         <div className="Search-box">
-            <span className="Search">
-                <DebounceInput onChange={e => setSearchQuery(e.target.value)}
-                               debounceTimeout={500}
-                               placeholder="Szukaj..."/>
-            </span>
+            <DebounceInput className="Search"
+                           onChange={e => setSearchQuery(e.target.value)}
+                           debounceTimeout={500}
+                           placeholder="Szukaj..."/>
         </div>
     )
 

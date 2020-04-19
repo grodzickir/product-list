@@ -12,13 +12,13 @@ function App() {
         <div className="App">
             <header className="App-header">
                 <nav className="Top-bar">
-                    <Logo />
-                    <Search setSearchQuery={setSearchQuery} />
-                    <div className="filler" style={{flex: 1}} />
+                    <Logo/>
+                    <Search setSearchQuery={setSearchQuery}/>
+                    <div className="filler" style={{flex: 1}}/>
                 </nav>
             </header>
-            <div>
-                <ProductList searchQuery={searchQuery} />
+            <div className="Content">
+                <ProductList searchQuery={searchQuery}/>
             </div>
         </div>
     );

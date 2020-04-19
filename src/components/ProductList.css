@@ -1,0 +1,14 @@
+.Product-list {
+    flex-wrap: wrap;
+}
+
+.Product {
+    max-width: 15rem;
+    min-width: 15rem !important;
+    flex: 1;
+}
+
+.card-img-top {
+    height: 15rem;
+    object-fit: contain;
+}
