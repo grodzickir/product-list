@@ -21,8 +21,8 @@ export default function ProductList({searchQuery}) {
 
     function filter(searchQuery, product) {
         return searchQuery == null
-            || product.name.includes(searchQuery)
-            || product.description.includes(searchQuery)
+            || product.name.toLowerCase().includes(searchQuery.toLowerCase())
+            || product.description.toLowerCase().includes(searchQuery.toLowerCase())
     }
 
 }
