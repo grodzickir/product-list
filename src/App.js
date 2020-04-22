@@ -10,10 +10,12 @@ function App() {
 
     const [searchQuery, setSearchQuery] = useState(null)
     const [sideBarActive, setSideBarActive] = useState(false)
+    const [currentAddress, setCurrentAddress] = useState(null)
 
     return (
         <div className="App">
-            <DeliverySideBar sideBarActive={sideBarActive} setSideBarActive={setSideBarActive}/>
+            <DeliverySideBar sideBarActive={sideBarActive} setSideBarActive={setSideBarActive}
+                             setCurrentAddress={setCurrentAddress}/>
             <div className="Wrapper">
                 <header className="App-header">
                     <nav className="Top-bar">
@@ -21,7 +23,8 @@ function App() {
                         <Search setSearchQuery={setSearchQuery}/>
                         <div className="filler" style={{flex: 1}}/>
                     </nav>
-                    <DeliveryBar sideBarActive={sideBarActive} setSideBarActive={setSideBarActive}/>
+                    <DeliveryBar sideBarActive={sideBarActive} setSideBarActive={setSideBarActive}
+                                 currentAddress={currentAddress}/>
                 </header>
                 <div className="Content">
                     <ProductList searchQuery={searchQuery}/>

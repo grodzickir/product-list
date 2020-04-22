@@ -6,7 +6,7 @@
     top: 0;
     left: -250px;
     transition: all 0.3s;
-    background-color: #425ECB;
+    background-color: rgba(66, 94, 203, 0.85);
     z-index: 999;
 }
 
@@ -15,10 +15,15 @@
 }
 
 .Sidebar-header {
+    background-color: rgba(26, 64, 206, 0.85);
+    padding: 10px 0;
     display: flex;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
-.Sidebar-header > h3 {
+.Sidebar-header > h4 {
+    padding: 4rem 0;
     flex-grow: 1;
 }
 
@@ -28,6 +33,15 @@
 }
 
 .Sidebar-close > img {
+    max-height: 20px;
+    width: auto;
+}
+
+.NewAddressBar {
+    align-content: flex-end;
+}
+
+.NewAddressBtn > img {
     max-height: 20px;
     width: auto;
 }

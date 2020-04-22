@@ -1,7 +1,7 @@
 import React from "react";
 import "./DeliveryBar.css"
 
-export default function DeliveryBar({sideBarActive, setSideBarActive}) {
+export default function DeliveryBar({sideBarActive, setSideBarActive, currentAddress}) {
 
     return (
         <div className="Delivery-Bar">
@@ -9,7 +9,7 @@ export default function DeliveryBar({sideBarActive, setSideBarActive}) {
                 <img src="bicycle-icon.png"/>
             </div>
             <span className="address">
-                {/*  TODO address  */}
+                {currentAddress?.street} {currentAddress?.city} {currentAddress?.postalCode}
             </span>
         </div>
     )
