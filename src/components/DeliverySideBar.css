@@ -1,0 +1,33 @@
+.Sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    transition: all 0.3s;
+    background-color: #425ECB;
+    z-index: 999;
+}
+
+.Sidebar.active {
+    left: 0;
+}
+
+.Sidebar-header {
+    display: flex;
+}
+
+.Sidebar-header > h3 {
+    flex-grow: 1;
+}
+
+.Sidebar-close {
+    flex: 1;
+    cursor: pointer;
+}
+
+.Sidebar-close > img {
+    max-height: 20px;
+    width: auto;
+}

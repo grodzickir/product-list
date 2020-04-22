@@ -1,0 +1,15 @@
+.Delivery-Bar {
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 1px solid black;
+}
+
+.Delivery-Btn {
+    flex: 1;
+    max-width: 50px;
+}
+
+.Delivery-Btn > img {
+    max-height: 50px;
+    width: auto;
+}
