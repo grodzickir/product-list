@@ -5,11 +5,12 @@
 }
 
 .Delivery-Btn {
-    flex: 1;
     max-width: 50px;
+    pointer-events: all;
+    cursor: pointer;
 }
 
 .Delivery-Btn > img {
     max-height: 50px;
-    width: auto;
+    width: 50px;
 }

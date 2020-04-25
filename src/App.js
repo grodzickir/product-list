@@ -4,7 +4,7 @@ import ProductList from "./components/ProductList";
 import Logo from "./components/Logo";
 import Search from "./components/Search";
 import DeliveryBar from "./components/DeliveryBar";
-import DeliverySideBar from "./components/DeliverySideBar";
+import DeliverySideBar from "./components/delivery-side-bar/DeliverySideBar";
 
 function App() {
 

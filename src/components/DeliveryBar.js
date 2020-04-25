@@ -5,12 +5,25 @@ export default function DeliveryBar({sideBarActive, setSideBarActive, currentAdd
 
     return (
         <div className="Delivery-Bar">
-            <div className="btn Delivery-Btn" onClick={sidebarToggle}>
+            <div className="Delivery-Btn" onClick={sidebarToggle}>
                 <img src="bicycle-icon.png"/>
             </div>
-            <span className="address">
-                {currentAddress?.street} {currentAddress?.city} {currentAddress?.postalCode}
-            </span>
+            <div className="d-flex flex-column ml-2">
+                {currentAddress ?
+                    <>
+                        <div className="text-justify">
+                            {currentAddress?.street}
+                        </div>
+                        <div className="text-justify">
+                            {currentAddress?.city} {currentAddress?.postalCode}
+                        </div>
+                    </>
+                    :
+                    <div>
+                        [Brak ustawionego adresu]
+                    </div>
+                }
+            </div>
         </div>
     )
 

@@ -1,10 +1,12 @@
 import React, {useState} from "react";
-import Address from "./Address";
 import "./DeliverySideBar.css"
+import NewAddressForm from "./NewAddressForm";
 
 export default function DeliverySideBar({sideBarActive, setSideBarActive, setCurrentAddress}) {
 
     const [addresses, setAddresses] = useState(null)
+
+    const [showNewAddressForm, setShowNewAddressForm] = useState(false)
 
     return (
         <div className={"Sidebar " + (sideBarActive ? "active" : "inactive")}>
@@ -25,13 +27,18 @@ export default function DeliverySideBar({sideBarActive, setSideBarActive, setCur
                         {a.street} {a.city} {a.postalCode}
                     </div>
                 )}
-                {/*  new address form  */}
+
+                {showNewAddressForm ? <NewAddressForm setNewAddress={setNewAddress}/> : null}
             </div>
         </div>
     )
 
     function addAddress() {
-        let address = new Address("test", "test", null)
+        setShowNewAddressForm(true)
+    }
+
+    function setNewAddress(address) {
+        console.log(address)
         let newAddresses
         if (addresses != null) {
             addresses.push(address)
@@ -39,10 +46,9 @@ export default function DeliverySideBar({sideBarActive, setSideBarActive, setCur
         } else {
             newAddresses = [address]
         }
-        console.log(address)
-        //show new address dialog
         setAddresses(newAddresses)
-        setCurrentAddress(address)
+        setCurrentAddress(address);
+        setShowNewAddressForm(false);
     }
 
     function closeSideBar() {

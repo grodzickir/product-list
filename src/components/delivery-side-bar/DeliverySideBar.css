@@ -1,10 +1,10 @@
 .Sidebar {
-    min-width: 250px;
-    max-width: 250px;
+    min-width: 450px;
+    max-width: 450px;
     height: 100vh;
     position: fixed;
     top: 0;
-    left: -250px;
+    left: -450px;
     transition: all 0.3s;
     background-color: rgba(66, 94, 203, 0.85);
     z-index: 999;
@@ -30,6 +30,7 @@
 .Sidebar-close {
     flex: 1;
     cursor: pointer;
+    max-width: 40px;
 }
 
 .Sidebar-close > img {
