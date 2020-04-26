@@ -6,10 +6,10 @@ export default function Product({product}) {
 
     return (
         <Card className="Product w20 m-3">
-            <Card.Img className="Card-img" variant="top" src={product.image_url}/>
+            <Card.Img className="Card-img p-2" variant="top" src={product.image_url}/>
             <Card.Body>
                 <Card.Title>{product.name}</Card.Title>
-                <Card.Text>{product.description}</Card.Text>
+                <Card.Text>{product.description.substring(0, 140)}</Card.Text>
             </Card.Body>
         </Card>
     )

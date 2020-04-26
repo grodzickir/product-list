@@ -4,11 +4,11 @@ import "./DeliveryBar.css"
 export default function DeliveryBar({sideBarActive, setSideBarActive, currentAddress}) {
 
     return (
-        <div className="Delivery-Bar">
-            <div className="Delivery-Btn" onClick={sidebarToggle}>
-                <img src="bicycle-icon.png"/>
+        <div className="Delivery-Bar p-1">
+            <div className="Delivery-Btn p-1" onClick={sidebarToggle}>
+                <img className="img-fluid" src="bicycle-icon.png"/>
             </div>
-            <div className="d-flex flex-column ml-2">
+            <div className="d-flex flex-column ml-4">
                 {currentAddress ?
                     <>
                         <div className="text-justify">

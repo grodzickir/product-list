@@ -15,7 +15,7 @@ function App() {
     return (
         <div className="App">
             <DeliverySideBar sideBarActive={sideBarActive} setSideBarActive={setSideBarActive}
-                             setCurrentAddress={setCurrentAddress}/>
+                             setCurrentAddressOnBar={setCurrentAddress}/>
             <div className="Wrapper">
                 <header className="App-header">
                     <nav className="Top-bar">

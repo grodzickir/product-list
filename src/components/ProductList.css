@@ -6,6 +6,20 @@
     max-width: 15rem;
     min-width: 15rem !important;
     flex: 1;
+    border-radius: 8px !important;
+    cursor: pointer;
+    transition: all 0.6s;
+}
+
+.Product:hover {
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, .5);
+    transform: scale(1.02);
+
+}
+
+.card-body {
+    border-radius: 8px;
+    border-top: 1px solid rgba(0, 0, 0, .125);
 }
 
 .card-img-top {

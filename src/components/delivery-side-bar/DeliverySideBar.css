@@ -42,6 +42,20 @@
     align-content: flex-end;
 }
 
+.Address-tick {
+    max-width: 2rem;
+    flex: 1;
+    cursor: pointer;
+}
+
+.Address-content {
+    flex: 10;
+}
+
+.Address-choose {
+    flex: 1;
+}
+
 .NewAddressBtn > img {
     max-height: 20px;
     width: auto;

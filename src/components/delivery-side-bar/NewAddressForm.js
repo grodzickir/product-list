@@ -7,7 +7,7 @@ export default function NewAddressForm({setNewAddress}) {
 
     const {register, handleSubmit, watch, errors} = useForm();
     const onSubmit = data => {
-        let address = new Address(data.city, data.street, data.postalCode);
+        let address = new Address({city: data.city, street: data.street, postalCode: data.postalCode});
         setNewAddress(address);
     };
 

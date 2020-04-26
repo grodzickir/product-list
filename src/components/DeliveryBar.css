@@ -5,9 +5,15 @@
 }
 
 .Delivery-Btn {
-    max-width: 50px;
     pointer-events: all;
     cursor: pointer;
+    transition: 0.3s all;
+    border: 1px solid #ececec;
+    border-radius: 9px;
+}
+
+.Delivery-Btn:hover {
+    background-color: #ececec;
 }
 
 .Delivery-Btn > img {
