@@ -9,7 +9,8 @@ export default function Product({product}) {
             <Card.Img className="Card-img p-2" variant="top" src={product.image_url}/>
             <Card.Body>
                 <Card.Title>{product.name}</Card.Title>
-                <Card.Text>{product.description.substring(0, 140)}</Card.Text>
+                <Card.Text>{product.description.substring(0, 140)}{product.description.length > 140 ? "..." : ""}</Card.Text>
+                <Card.Text>od <span className="font-weight-bold">{product.price} zł </span> / dzień</Card.Text>
             </Card.Body>
         </Card>
     )
