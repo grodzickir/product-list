@@ -2,7 +2,7 @@ import React from "react";
 
 export default function AddressCard({address, setCurrentAddress}) {
 
-    return (//TODO selected highlight
+    return (
         <div className="card d-flex flex-row p-2">
             <div className="Address-tick p-1">
                 {
