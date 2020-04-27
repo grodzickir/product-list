@@ -1,13 +1,14 @@
-import React, {useState} from "react";
+import React, {useReducer, useState} from "react";
 import "./DeliverySideBar.css"
 import NewAddressForm from "./NewAddressForm";
 import AddressCard from "./AddressCard";
+import AddressReducer, {AddressesActionTypes} from "./AddressReducer";
 
 export default function DeliverySideBar({sideBarActive, setSideBarActive, setCurrentAddressOnBar}) {
 
-    const [addresses, setAddresses] = useState([])
+    const [addresses, dispatchAddressAction] = useReducer(AddressReducer, []);
 
-    const [showNewAddressForm, setShowNewAddressForm] = useState(false)
+    const [showNewAddressForm, setShowNewAddressForm] = useState(false);
 
     return (
         <div className={"Sidebar " + (sideBarActive ? "active" : "inactive")}>
@@ -37,18 +38,14 @@ export default function DeliverySideBar({sideBarActive, setSideBarActive, setCur
     }
 
     function setCurrentAddress(address) {
-        let addressesCopy = Array.from(addresses);
-        addressesCopy.forEach(a => a.selected = false);
-        address.selected = true;
-        setAddresses(addressesCopy);
+        dispatchAddressAction({type: AddressesActionTypes.SET_CURRENT, payload: address});
         setCurrentAddressOnBar(address);
     }
 
     function addNewAddress(address) {
-        console.log(address)
-        addresses.push(address);
-        setCurrentAddress(address);
+        dispatchAddressAction({type: AddressesActionTypes.ADD, payload: address});
         setShowNewAddressForm(false);
+        setCurrentAddressOnBar(address);
     }
 
     function closeSideBar() {
