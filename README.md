@@ -1,3 +1,5 @@
+Frontend React application for showing product list and managing delivery addresses.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
